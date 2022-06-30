@@ -5,3 +5,10 @@
 html{
     scroll-behavior: smooth;
 }
+
+@layer components{
+    .input{
+
+        @apply rounded border-[1px] border-gray-300 border-b-2 border-b-sky-800 outline-none w-full
+    }
+}

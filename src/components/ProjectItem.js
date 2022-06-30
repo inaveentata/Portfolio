@@ -1,6 +1,6 @@
 const ProjectItem = ({ image }) => {
   return (
-    <div className="mb-3 sm:mx-auto sm:mb-auto w-full rounded-2xl overflow-hidden border shadow-orange-400 shadow-sm">
+    <div className="mb-3 sm:mx-auto sm:mb-auto w-full rounded-2xl overflow-hidden border shadow-orange-400 shadow-sm cursor-pointer hover:scale-[0.99]">
       <img
         src=""
         alt=""
