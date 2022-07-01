@@ -20,6 +20,7 @@ const Navbar = () => {
   const handleClick = (e) => {
     e.preventDefault();
     const target = e.target.getAttribute("href");
+    console.log(target);
     const location = document.querySelector(target).offsetTop;
     window.scrollTo({
       left: 0,
@@ -27,13 +28,17 @@ const Navbar = () => {
     });
   };
   return (
-    <header className="p-3 sm:p-5 bg-white sticky top-0 left-0 lg:w-5/6 lg:mx-auto">
+    <header className="border-b-2 border-b-sky-500 p-3 sm:p-5 bg-white sticky top-0 left-0 lg:w-5/6 lg:mx-auto">
       <nav className="sm:flex justify-between">
         <div className="flex justify-between">
-          <div className="flex ">
+          <div className="flex">
             <img src={logo} alt="logo" className=" rounded-xl w-6 mr-2" />
-            <h3>Naveen </h3>
+            <a href="#about" onClick={handleClick}>
+              {" "}
+              Naveen
+            </a>
           </div>
+
           <span
             className="sm:hidden cursor-pointer"
             onClick={() => setToggle(!toggle)}
