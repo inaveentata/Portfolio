@@ -1,4 +1,5 @@
-import { useState } from "react";
+import { useRef,useState } from "react";
+import emailjs from "@emailjs/browser";
 import { BsGithub, BsLinkedin, BsTwitter } from "react-icons/bs";
 
 const socialLinks = [
@@ -25,35 +26,34 @@ const socialLinks = [
   },
 ];
 const Contact = () => {
-  const [formData, setFormData] = useState({
-    firstName: "",
-    lastName: "",
-    email: "",
-    comments: "",
-  });
+  const form = useRef();
+  const [isMessageSent, setIsMessageSent] = useState(false)
 
-  const handleFormData = (e) => {
-    const { name, value } = e.target;
-    setFormData((prevData) => {
-      return {
-        ...prevData,
-        [name]: value,
-      };
-    });
-  };
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    if (formData.email) {
-      window.confirm(`Hello, ${formData.firstName}! Do you want to send?
-      `);
-      setFormData({
-        firstName: "",
-        lastName: "",
-        email: "",
-        comments: "",
-      });
-    }
-  };
+  
+
+ const sendEmail = (e) => {
+   e.preventDefault(); 
+     emailjs
+       .sendForm(
+         "service_vv88czq",
+         "template_dk14q0f",
+         form.current,
+         "BaMJJ9LpSLZQqGnn_"
+       )
+       .then(
+         (result) => {
+           console.log(result.text);
+           e.target.reset();
+           setIsMessageSent(true)
+           setTimeout(() => {
+             setIsMessageSent(false)
+           }, 2000)
+         },
+         (error) => {
+           console.log(error.text);
+         }
+       );
+ };
   return (
     <section
       id="contact"
@@ -62,64 +62,59 @@ const Contact = () => {
       <h1 className="text-4xl my-5">Contact</h1>
       <div className="lg:grid lg:grid-cols-2">
         <form
-          onSubmit={handleSubmit}
+          ref={form}
+          onSubmit={sendEmail}
           className="max-w-[800px] mx-auto lg:pr-3 text-xl"
         >
           <div className="sm:grid sm:grid-cols-2 gap-2">
-            <label htmlFor="firstName">
-              First Name
+            <label htmlFor="name">
+              Name
               <input
                 className="input mb-3"
                 type="text"
-                name="firstName"
-                id=""
-                value={formData.firstName}
-                onChange={handleFormData}
+                name="user_name"
+                id="name"
               />
             </label>
-            <label htmlFor="lastName">
+            <label htmlFor="email">
               {" "}
-              Last Name
+              Email
               <input
-                className="input mb-3"
-                type="text"
-                name="lastName"
-                id=""
-                value={formData.lastName}
-                onChange={handleFormData}
+                className="input mb-3 block"
+                type="email"
+                name="user_email"
+                id="email"
               />
             </label>
           </div>
-          <label htmlFor="email">
+          <label>
             {" "}
-            Email
-            <input
-              className="input mb-3 block"
-              type="email"
-              name="email"
+            Message
+            <textarea
+              className="input p-3"
+              name="message"
               id=""
-              value={formData.email}
-              onChange={handleFormData}
+              cols="30"
+              rows="10"
+              placeholder="Start type over here...."
             />
           </label>
-          <textarea
-            className="input p-3"
-            name="comments"
-            id=""
-            cols="30"
-            rows="10"
-            value={formData.comments}
-            onChange={handleFormData}
-            placeholder="Start type over here...."
-          />
-
           <button
             type="submit"
             className="block bg-sky-600 text-white px-2 text-xl rounded"
           >
             Send
-          </button>
+          </button>{" "}
+          {isMessageSent && (
+            <span className="  flex justify-center items-center">
+              {" "}
+              <p className="text-center text-green-600 rounded-xl px-4  border-[1px] border-black bg-gray-200">
+                Message Sent
+              </p>
+            </span>
+          )}
         </form>
+        {/* -------- social media links -------*/}
         <ul className="p-4 my-10 lg:my-0 lg:border-l-2 lg: border-l-sky-800 flex lg:flex-col lg:justify-center max-w-[800px] mx-auto lg:mx-0">
           {socialLinks.map((link) => (
             <li
