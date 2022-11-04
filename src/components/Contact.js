@@ -7,10 +7,22 @@ const socialLinks = [
     icon: <BsGithub />,
     text: "Github",
     url: "https://www.github.com/inaveentata",
-    color:''
+    color: "",
   },
-  { id: 2, icon: <BsLinkedin />, text: "LinkedIn", url: "#",color:'text-blue-900' },
-  { id: 3, icon: <BsTwitter />, text: "Twitter", url: "#",color:'text-sky-400' },
+  {
+    id: 2,
+    icon: <BsLinkedin />,
+    text: "LinkedIn",
+    url: "https://www.linkedin.com/in/naveen-tata-b2a41524b/",
+    color: "text-blue-900",
+  },
+  {
+    id: 3,
+    icon: <BsTwitter />,
+    text: "Twitter",
+    url: "#",
+    color: "text-sky-400",
+  },
 ];
 const Contact = () => {
   const [formData, setFormData] = useState({
@@ -43,12 +55,18 @@ const Contact = () => {
     }
   };
   return (
-    <section id="contact" className=" bg-gray-100 lg:w-5/6 mx-auto p-4">
+    <section
+      id="contact"
+      className="border-b-2 bg-gray-100 max-w-screen-xl mx-auto p-4"
+    >
       <h1 className="text-4xl my-5">Contact</h1>
       <div className="lg:grid lg:grid-cols-2">
-        <form onSubmit={handleSubmit} className="max-w-[800px] mx-auto lg:pr-3 text-xl">
+        <form
+          onSubmit={handleSubmit}
+          className="max-w-[800px] mx-auto lg:pr-3 text-xl"
+        >
           <div className="sm:grid sm:grid-cols-2 gap-2">
-            <label htmlFor="firstName" >
+            <label htmlFor="firstName">
               First Name
               <input
                 className="input mb-3"
@@ -104,10 +122,18 @@ const Contact = () => {
         </form>
         <ul className="p-4 my-10 lg:my-0 lg:border-l-2 lg: border-l-sky-800 flex lg:flex-col lg:justify-center max-w-[800px] mx-auto lg:mx-0">
           {socialLinks.map((link) => (
-            <li key={link.id} className={`${link.color} sm:text-2xl flex items-center cursor-pointer ml-2  lg:ml-10 mx-auto lg:mx-0`}>
+            <li
+              key={link.id}
+              className={`${link.color} sm:text-2xl flex items-center cursor-pointer ml-2  lg:ml-10 mx-auto lg:mx-0`}
+            >
               {" "}
               {link.icon}
-              <a href={link.url} target="_blank" className="ml-3 text-black hover:translate-x-1">
+              <a
+                href={link.url}
+                target="_blank"
+                rel="noreferrer"
+                className="ml-3 text-black hover:translate-x-1"
+              >
                 {link.text}
               </a>
             </li>
