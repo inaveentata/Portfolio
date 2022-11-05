@@ -48,10 +48,10 @@ const Projects = () => {
   return (
     <section
       id="projects"
-      className="border-b-2 bg-gray-100 max-w-screen-xl p-4 md:px-8 mx-auto"
+      className="border-b-2 bg-gray-100 max-w-screen-xl p-4 md:px-8 m-auto"
     >
       <h2 className=" mt-2 mb-4 text-4xl ">Projects</h2>
-      <div className="grid mx-auto sm:gap-6 sm:grid-cols-2">
+      <div className="grid mx-auto sm:gap-6 sm:grid-cols-2 p-4">
         {
           projectsData.map(project => <ProjectItem key={project.title} project={project} />)
         }
