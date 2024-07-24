@@ -25,7 +25,7 @@ const Header = ({ toggle }) => {
         <NavBtn>
           <a
             className="btn PrimaryBtn"
-            href="/Naveen_Tata.pdf"
+            href="/Naveen_v-1.2.pdf"
             target="_blank"
             rel="noopener noreferrer"
           >
