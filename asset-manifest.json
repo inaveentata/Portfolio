@@ -1,19 +1,14 @@
 {
   "files": {
-    "main.css": "/Portfolio/static/css/main.e52437f9.css",
-    "main.js": "/Portfolio/static/js/main.5f1636da.js",
-    "static/media/Hacker-news.png": "/Portfolio/static/media/Hacker-news.5c9204bbfd7c366bf543.png",
-    "static/media/Weather.png": "/Portfolio/static/media/Weather.c05cb6c3bea887b241ae.png",
-    "static/media/Invoice.png": "/Portfolio/static/media/Invoice.4a406b8a7f2cfea5fcbb.png",
-    "static/media/Naveen_Tata.pdf": "/Portfolio/static/media/Naveen_Tata.7821a5b1d38322fad5c8.pdf",
-    "static/media/todos.png": "/Portfolio/static/media/todos.1b479b14beb63666b973.png",
-    "static/media/crop_Naveen.jpg": "/Portfolio/static/media/crop_Naveen.f835f8cd7ab75d8622d4.jpg",
-    "index.html": "/Portfolio/index.html",
-    "main.e52437f9.css.map": "/Portfolio/static/css/main.e52437f9.css.map",
-    "main.5f1636da.js.map": "/Portfolio/static/js/main.5f1636da.js.map"
+    "main.css": "/static/css/main.cb28ad7e.css",
+    "main.js": "/static/js/main.b76e57c6.js",
+    "index.html": "/index.html",
+    "static/media/blob-haikei.svg": "/static/media/blob-haikei.ed4231cd548cd312fe4f.svg",
+    "main.cb28ad7e.css.map": "/static/css/main.cb28ad7e.css.map",
+    "main.b76e57c6.js.map": "/static/js/main.b76e57c6.js.map"
   },
   "entrypoints": [
-    "static/css/main.e52437f9.css",
-    "static/js/main.5f1636da.js"
+    "static/css/main.cb28ad7e.css",
+    "static/js/main.b76e57c6.js"
   ]
 }
