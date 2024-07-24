@@ -1,4 +1,4 @@
 # Portfolio
 
-Simple portfolio application built with React, Tailwind CSS. 
+Simple portfolio application built with React, Material UI. 
 
