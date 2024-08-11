@@ -1,6 +1,22 @@
 // --------------------------------------- Project List
 export const ProjectList = [
   {
+    img:'/unerth.png',
+    title: 'Unerth (A B2B AI-based Enterprise Search Engine)',
+    description: 'An enterprise productivity suite with 10+ AI models and 1000+ integrations to different data sources',
+    tech_stack: ['Nextjs', 'React.js', 'Redux(Redux Toolkit)', 'RTK Query', 'Typescript', 'Sass'],
+    github_url: '',
+    demo_url: 'https://unerth.ai/'
+  },
+  {
+    img:'/pcm.png',
+    title: 'Case Management',
+    description: 'An application designed to streamline and simplify case tracking for police departments, eliminating manual record-keeping and enhancing the efficiency of case management.',
+    tech_stack: ['Nextjs', 'React.js', 'Redux(Redux Toolkit)', 'RTK Query', 'Typescript', 'Sass'],
+    github_url: '',
+    demo_url: ''
+  },
+  {
     img: "/invoice.png",
     title: "Invoice Generator",
     description:
@@ -8,25 +24,7 @@ export const ProjectList = [
     tech_stack: ["React", "TypeScript", "Material UI"],
     github_url: "https://github.com/inaveentata/invoice-generator",
     demo_url: "https://invoice-generator-04-aug.netlify.app/",
-  },
-  {
-    img: "/todos.png",
-    title: "Multi Todo App",
-    description:
-      "This application works for multiple todo lists and each todo list maintaines it's individual todo items.",
-    tech_stack: ["React", "TypeScript", "TailwindCSS"],
-    github_url: "https://github.com/inaveentata/todo-mvc-app",
-    demo_url: "https://todo-mvc-app-aug-18-2022.netlify.app/",
-  },
-  {
-    img: "/weather.png",
-    title: "Simple Weather App",
-    description:
-      "A weather application which gives real time weather information based on the current user input anywhere in the world.",
-    tech_stack: ["ReactJs", "Vanilla CSS"],
-    github_url: "https://github.com/inaveentata/react-weather-application",
-    demo_url: "https://react-weather-app-1-jun-2022.netlify.app/",
-  },
+  }  
 ];
 
 // --------------------------------------- Skills
