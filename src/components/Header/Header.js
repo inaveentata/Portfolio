@@ -9,6 +9,7 @@ const Header = ({ toggle }) => {
           <img
             src="/apple-touch-icon.png"
             alt="logo"
+            style={{borderRadius:'1rem'}}
           />
         </Logo>
         <NavMenu>
@@ -25,7 +26,7 @@ const Header = ({ toggle }) => {
         <NavBtn>
           <a
             className="btn PrimaryBtn"
-            href="/Naveen_v-1.2.pdf"
+            href="/Naveen_Tata.pdf"
             target="_blank"
             rel="noopener noreferrer"
           >
