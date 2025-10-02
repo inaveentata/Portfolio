@@ -23,7 +23,7 @@ function About() {
         </ScrollAnimation>
           <div className="AboutBio">
             <ScrollAnimation animateIn="fadeInLeft">
-            Hello! My name is <strong>Naveen Tata</strong>. I am a dedicated frontend developer with over 3.7 years of professional experience. 
+            Hello! My name is <strong>Naveen Tata</strong>. I am a dedicated frontend developer with over 3.8 years of professional experience. 
             </ScrollAnimation>
 
             <br /><br />
